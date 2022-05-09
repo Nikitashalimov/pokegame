@@ -1,16 +1,23 @@
-import h from "./Header.module.css"
+import s from "./Header.module.css"
 
-function Header(props) {
+function Header({title, descr, onClickButton}) {
+const handleClick = () => {
+	console.log('####: <Header />');
+	onClickButton && onClickButton('game');
+}
 
 	return (
-		<header className={h.root}>
-			<div className={h.forest}></div>
-			<div className={h.container}>
-				<h1>{props.title}</h1>
-				<p>{props.descr}!</p>
+		<header className={s.root}>
+			<div className={s.forest}></div>
+			<div className={s.container}>
+				<h1>{title}</h1>
+				<p>{descr}!</p>
+				<button onClick={handleClick}>
+					Start Game
+				</button>
 			</div>
 		</header>
 	);
 }
 
-export default Header;
+export default Header

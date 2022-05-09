@@ -1,4 +1,5 @@
-import l from "./Layout.module.css";
+import s from "./Layout.module.css";
+import cn from 'classnames';
 
 const Layout = ({id, title, urlBg, colorBg, children}) => {
 	const layoutStyle = {};
@@ -13,17 +14,17 @@ const Layout = ({id, title, urlBg, colorBg, children}) => {
 
 	return (
 		<section 
-		className={l.root} 
+		className={s.root} 
 		style={layoutStyle} 
 		id={id}
 		>
-			<div className={l.wrapper}>
+			<div className={s.wrapper}>
 				<article>
-					<div className={l.title}>
+					<div className={s.title}>
 						<h3>{title}</h3>
-						<span className={l.separator}></span>
+						<span className={s.separator}></span>
 					</div>
-					<div className={`${l.desc} ${l.full}`}>
+					<div className={cn(s.desc, s.full)}>
 						{children}
 					</div>
 				</article>
