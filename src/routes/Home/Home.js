@@ -1,7 +1,8 @@
-import './Home.module.css';
+import s from './Home.module.css';
 import Header from '../../components/Header/Header';
 import Layout from '../../components/Layout/Layout';
 import Footer from '../../components/Footer/Footer';
+import MenuHeader from '../../components/MenuHeader/MenuHeader';
 import PokemonCard from '../../components/PokemonCard/PokemonCard';
 import bg2 from '../../assets/bg2.jpg';
 import bg3 from '../../assets/bg3.jpg';
@@ -139,17 +140,18 @@ const POKEMONS = [{
   }
 }];
 
-function HomePage({onChangePage}) {
-	const handleClickButton = (page) => {
-		console.log('####: <HomePage />');
+function HomePage({ onChangePage }) {
+  const handleClickButton = (page) => {
+    console.log('####: <HomePage />');
     onChangePage && onChangePage(page);
-	}
+  }
   return (
     <div>
+      <MenuHeader />
       <Header
         title="Pokemon Game"
         descr="This is simple triple triad card game"
-		onClickButton={handleClickButton}
+        onClickButton={handleClickButton}
       />
       <Layout
         title="This is first Layout"
@@ -175,7 +177,7 @@ function HomePage({onChangePage}) {
         colorTitle="#FEFEFE"
         colorBg="#202736"
       >
-        <div className="flex">
+        <div className={s.flex}>
           {
             POKEMONS.map(item => <PokemonCard
               name={item.name}

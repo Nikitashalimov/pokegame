@@ -12,7 +12,7 @@ const handleClick = () => {
 			<div className={s.container}>
 				<h1>{title}</h1>
 				<p>{descr}!</p>
-				<button onClick={handleClick}>
+				<button className={s.button} onClick={handleClick}>
 					Start Game
 				</button>
 			</div>
