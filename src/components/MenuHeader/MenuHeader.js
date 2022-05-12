@@ -2,24 +2,21 @@ import { useState } from "react";
 import Menu from "./Menu/Menu";
 import Navbar from "./Navbar/Navbar";
 
-const MenuHeader = () => {
+const MenuHeader = ({ bgActive}) => {
 
-	const [mainStatus, setStatus] = useState('active');
+	const [mainStatus, setStatus] = useState(null);
 
 	const handleChangeStatus = () => {
-		console.log('дошло');
-		if (mainStatus == 'deactive') {
-			setStatus('active');
-		} else {
-			setStatus('deactive');
-		}
+		setStatus(prevState => !prevState);
 	}
 
 	return (
-		<div>
+		<>
 			<Menu status={mainStatus} />
-			<Navbar status={mainStatus} onChangeStatus={handleChangeStatus} />
-		</div>
+			<Navbar status={mainStatus} 
+			bgActive={bgActive}
+			onChangeStatus={handleChangeStatus} />
+		</>
 	);
 }
 

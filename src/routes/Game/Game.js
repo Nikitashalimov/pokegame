@@ -1,3 +1,4 @@
+import MenuHeader from '../../components/MenuHeader/MenuHeader';
 import s from "./Game.module.css"
 
 const GamePage = ({ onChangePage }) => {
@@ -9,7 +10,10 @@ const GamePage = ({ onChangePage }) => {
 	return (
 		<div>
 			<div>This is Game Page!!!</div>
-			<button className={s.button} onClick={handleClickButton}>
+			<button
+				className={s.button}
+				onClick={handleClickButton}
+			>
 				Return main
 			</button>
 		</div>

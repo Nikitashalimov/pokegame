@@ -1,11 +1,13 @@
-import s from './Home.module.css';
 import Header from '../../components/Header/Header';
 import Layout from '../../components/Layout/Layout';
 import Footer from '../../components/Footer/Footer';
-import MenuHeader from '../../components/MenuHeader/MenuHeader';
 import PokemonCard from '../../components/PokemonCard/PokemonCard';
+import MenuHeader from '../../components/MenuHeader/MenuHeader';
+
 import bg2 from '../../assets/bg2.jpg';
 import bg3 from '../../assets/bg3.jpg';
+
+import s from './Home.module.css';
 
 const POKEMONS = [{
   "abilities": [
@@ -140,9 +142,8 @@ const POKEMONS = [{
   }
 }];
 
-function HomePage({ onChangePage }) {
+const HomePage = ({ onChangePage }) => {
   const handleClickButton = (page) => {
-    console.log('####: <HomePage />');
     onChangePage && onChangePage(page);
   }
   return (
