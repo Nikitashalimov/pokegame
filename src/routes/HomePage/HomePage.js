@@ -1,13 +1,11 @@
 import Header from '../../components/Header/Header';
 import Layout from '../../components/Layout/Layout';
-import Footer from '../../components/Footer/Footer';
 import PokemonCard from '../../components/PokemonCard/PokemonCard';
-import MenuHeader from '../../components/MenuHeader/MenuHeader';
 
 import bg2 from '../../assets/bg2.jpg';
 import bg3 from '../../assets/bg3.jpg';
 
-import s from './Home.module.css';
+import s from './HomePage.module.css';
 
 const POKEMONS = [{
   "abilities": [
@@ -142,17 +140,13 @@ const POKEMONS = [{
   }
 }];
 
-const HomePage = ({ onChangePage }) => {
-  const handleClickButton = (page) => {
-    onChangePage && onChangePage(page);
-  }
+const HomePage = () => {
+
   return (
     <div>
-      <MenuHeader />
       <Header
         title="Pokemon Game"
         descr="This is simple triple triad card game"
-        onClickButton={handleClickButton}
       />
       <Layout
         title="This is first Layout"
@@ -178,7 +172,7 @@ const HomePage = ({ onChangePage }) => {
         colorTitle="#FEFEFE"
         colorBg="#202736"
       >
-        <div className={s.flex}>
+        {/* <div className={s.flex}>
           {
             POKEMONS.map(item => <PokemonCard
               name={item.name}
@@ -188,7 +182,7 @@ const HomePage = ({ onChangePage }) => {
               values={item.values}
               key={item.id} />)
           }
-        </div>
+        </div> */}
       </Layout>
       <Layout
         title="This is first Layout"
@@ -199,7 +193,6 @@ const HomePage = ({ onChangePage }) => {
           opponent's cards by turning them into the player's own color of red or
           blue.</p>
       </Layout>
-      <Footer />
     </div>
 
   )

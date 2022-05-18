@@ -2,7 +2,7 @@ import { useState } from "react";
 import Menu from "./Menu/Menu";
 import Navbar from "./Navbar/Navbar";
 
-const MenuHeader = ({ bgActive}) => {
+const MenuHeader = ({ bgActive }) => {
 
 	const [mainStatus, setStatus] = useState(null);
 
@@ -12,10 +12,10 @@ const MenuHeader = ({ bgActive}) => {
 
 	return (
 		<>
-			<Menu status={mainStatus} />
-			<Navbar status={mainStatus} 
-			bgActive={bgActive}
-			onChangeStatus={handleChangeStatus} />
+			<Menu status={mainStatus} onChangeStatus={handleChangeStatus} />
+			<Navbar status={mainStatus}
+				bgActive={bgActive}
+				onChangeStatus={handleChangeStatus} />
 		</>
 	);
 }
