@@ -25,10 +25,12 @@ const MENU = [
 const Menu = ({ status, onChangeStatus }) => {
 
 	return (
-		<div className={cn(s.menuContainer, {
-			[s.active]: status === true,
-			[s.deactive]: status === false
-		})}
+		<div className={cn(s.menuContainer,
+			{
+				[s.active]: status === true,
+				[s.deactive]: status === false
+			}
+		)}
 		>
 			<div className={s.overlay} />
 			<div className={s.menuItems}>

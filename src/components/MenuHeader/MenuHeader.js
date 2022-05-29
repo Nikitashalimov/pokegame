@@ -4,7 +4,8 @@ import Navbar from "./Navbar/Navbar";
 
 const MenuHeader = ({ bgActive }) => {
 
-	const [mainStatus, setStatus] = useState(null);
+	const [mainStatus, setStatus] = useState(false);
+	console.log(mainStatus)
 
 	const handleChangeStatus = () => {
 		setStatus(prevState => !prevState);
@@ -12,10 +13,15 @@ const MenuHeader = ({ bgActive }) => {
 
 	return (
 		<>
-			<Menu status={mainStatus} onChangeStatus={handleChangeStatus} />
-			<Navbar status={mainStatus}
+			<Menu
+				status={mainStatus}
+				onChangeStatus={handleChangeStatus}
+			/>
+			<Navbar
+				status={mainStatus}
 				bgActive={bgActive}
-				onChangeStatus={handleChangeStatus} />
+				onChangeStatus={handleChangeStatus}
+			/>
 		</>
 	);
 }

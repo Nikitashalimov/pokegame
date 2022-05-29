@@ -58,3 +58,14 @@
 	align-items: center;
 	flex-wrap: wrap;
 }
+
+.buttonbox {
+	display: flex;
+	flex-wrap: wrap;
+	max-width: 240px;
+}
+
+.addCard {
+	margin-top: 10px;
+	background: #f300b4;
+}

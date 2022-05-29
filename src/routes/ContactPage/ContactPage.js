@@ -1,4 +1,18 @@
+// import React, { useEffect } from 'react';
 import s from "./ContactPage.module.css"
+
+// export const useEffectExample = () => {
+// 	useEffect(() => {
+// 		console.log('ComponentDidMount')
+// 		return () => {
+// 			console.log('ComponentWillUnmount')
+// 		}
+// 	}, [])
+// }
+
+// useEffect(() => {
+// 	console.log('Render happened')
+// })
 
 const ContactPage = () => {
 

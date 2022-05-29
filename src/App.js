@@ -36,8 +36,6 @@ const App = () => {
           <Footer />
         </>
       </Route>
-
-
     </Switch>
   )
 }
