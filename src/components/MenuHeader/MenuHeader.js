@@ -5,7 +5,6 @@ import Navbar from "./Navbar/Navbar";
 const MenuHeader = ({ bgActive }) => {
 
 	const [mainStatus, setStatus] = useState(false);
-	console.log(mainStatus)
 
 	const handleChangeStatus = () => {
 		setStatus(prevState => !prevState);

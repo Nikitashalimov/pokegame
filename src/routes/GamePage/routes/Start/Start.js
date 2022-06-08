@@ -5,12 +5,14 @@ import s from "./Start.module.css";
 import { FireBaseContext } from "../../../../context/firebaseContext";
 import { PokemonContext } from "../../../../context/pokemonContext";
 import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
+import { Player1PokemonsContext } from '../../../../context/player1PokemonsContext';
 
 const StartPage = () => {
 	const firebase = useContext(FireBaseContext);
 	const pokemonsContext = useContext(PokemonContext);
 	const history = useHistory();
 	const [pokemons, setPokemons] = useState({});
+	const [player1Pokemons, setPlayer1Pokemons] = useContext(Player1PokemonsContext);
 
 	useEffect(() => {
 		firebase.getPokemonSoket((pokemons) => {
@@ -34,8 +36,11 @@ const StartPage = () => {
 	}
 
 	const handleStartGameClick = () => {
+		setPlayer1Pokemons(Object.entries(pokemons));
 		history.push('/game/board');
 	}
+
+	console.log(Object.entries(pokemons));
 
 	return (
 		<div>

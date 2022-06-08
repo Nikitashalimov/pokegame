@@ -1,0 +1,34 @@
+.modal {
+    position: fixed;
+    background: rgba(0, 0, 0, .8);
+    z-index: -1;
+}
+
+.modal.active {
+    z-index: 100;
+    width: 100%;
+    height: 100%;
+}
+
+.result {
+    margin: auto;
+    width: 400px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.picture {
+    width: 400px;
+}
+
+.buttonFinish {
+    margin-top: 25px;
+    width: 150px;
+    height: 30px;
+    background-color: aqua;
+}
